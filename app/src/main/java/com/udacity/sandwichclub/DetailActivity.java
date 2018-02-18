@@ -15,6 +15,10 @@ import org.json.JSONException;
 
 import java.util.List;
 
+/**
+ * Extracts data from strings.xml and populates the UI for the selected list item.
+ */
+
 public class DetailActivity extends AppCompatActivity {
 
     public static final String EXTRA_POSITION = "extra_position";
@@ -69,19 +73,20 @@ public class DetailActivity extends AppCompatActivity {
 
         setTitle(sandwich.getMainName());
     }
-
+    /** If sandwich object equals null displays a toast message. */
     private void closeOnError() {
         finish();
         Toast.makeText(this, R.string.detail_error_message, Toast.LENGTH_SHORT).show();
     }
 
+    /** Populates the UI with data from a Sandwich object. */
     private void populateUI() {
         knownAs.setText(arrayToString(sandwich.getAlsoKnownAs()));
         placeOfOrigin.setText(sandwich.getPlaceOfOrigin());
         description.setText(sandwich.getDescription());
         ingredients.setText(arrayToString(sandwich.getIngredients()));
     }
-
+    /** Transforms the elements of a String array into a String. */
     private String arrayToString (List<String> array){
         String s = "";
         if (array != null && array.size()>0){

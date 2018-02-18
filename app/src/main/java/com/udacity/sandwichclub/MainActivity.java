@@ -8,6 +8,9 @@ import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
 import android.widget.ListView;
 
+/**
+ * Displays a ListView and on a item click opens an other activity.
+ */
 public class MainActivity extends AppCompatActivity {
 
     @Override
@@ -30,6 +33,7 @@ public class MainActivity extends AppCompatActivity {
         });
     }
 
+    /** Opens Detail Activity and sends the selected item position from the list. */
     private void launchDetailActivity(int position) {
         Intent intent = new Intent(this, DetailActivity.class);
         intent.putExtra(DetailActivity.EXTRA_POSITION, position);

@@ -9,8 +9,13 @@ import org.json.JSONObject;
 import java.util.ArrayList;
 import java.util.List;
 
+/**
+ * This class with its method parses Json data into a Sandwich object.
+ */
+
 public class JsonUtils {
 
+    /** Parses Json data into a Sandwich object. */
     public static Sandwich parseSandwichJson(String json) throws JSONException {
         Sandwich sandwich = new Sandwich();
         JSONObject sandwichDetails = new JSONObject(json);
@@ -33,6 +38,8 @@ public class JsonUtils {
 
         return sandwich;
     }
+
+    /** Transforms a JSONArray to an ArrayList<String>. */
     private static List<String> jsonArrayToStringArray(JSONArray array){
         ArrayList<String> temporalArray = new ArrayList<>();
         if (array != null && array.length()> 0){
