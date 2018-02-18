@@ -62,6 +62,7 @@ gen-external-apklibs
 # User-specific stuff:
 .idea/**/workspace.xml
 .idea/**/tasks.xml
+/.idea/
 
 # Sensitive or high-churn files:
 .idea/**/dataSources/
