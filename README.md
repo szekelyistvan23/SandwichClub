@@ -27,4 +27,4 @@ produces a Sandwich Object that can be used to populate the UI that you designed
 
 ## Screenshots
 
-![Screenshot](sandwich.png)
+![Screenshot](sandwich.gif)
